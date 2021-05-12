@@ -11,11 +11,7 @@ function createWindow () {
 mainWindow = new BrowserWindow({width: 800, height: 600})
 
   // 加载应用----react 打包
-  mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, './build/index.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
+  mainWindow.loadFile(path.join(__dirname, './build/index.html'))
   // 加载应用----适用于 react 开发时项目
   // mainWindow.loadURL('http://localhost:3000/');
   

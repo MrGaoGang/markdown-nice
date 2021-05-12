@@ -4,9 +4,8 @@
   "description": "a markdown editor with the function of style edition",
   "version": "1.8.22",
   "private": false,
-  "main": "lib/Lib.js",
-  "module": "lib/Lib.js",
-  "homepage": "https://www.mdnice.com",
+  "main": "main.js",
+  "homepage": "./",
   "license": "GPL-3.0",
   "typings": "./lib/index.d.ts",
   "repository": {
@@ -16,6 +15,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "watch": "node ./watch.js",
+    "elec-start": "electron .",
+    "elec-build": "electron-packager . MarkdownMac --platform=darwin --arch=x64  --out=./out --app-version=0.0.1 --overwrite --ignore=node_modules",  
     "build": "node --max_old_space_size=4096 scripts/build.js",
     "test": "node scripts/test.js",
     "analyze": "source-map-explorer build/static/js/*.js",
@@ -32,6 +33,7 @@
     "antd": "^3.15.1",
     "axios": "^0.18.0",
     "diff-match-patch": "^1.0.4",
+    "electron": "^12.0.7",
     "highlight.js": "^9.15.6",
     "juice": "^5.2.0",
     "lodash.debounce": "^4.0.8",
