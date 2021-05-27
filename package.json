@@ -17,6 +17,7 @@
     "watch": "node ./watch.js",
     "elec-start": "electron .",
     "elec-build": "electron-packager . MarkdownMac --platform=darwin --arch=x64  --out=./out --app-version=0.0.1 --overwrite --ignore=node_modules",
+    "elec-build-win": "electron-packager . MarkdownWin --platform=win32 --arch=x64  --out=./out --app-version=0.0.1 --overwrite --ignore=node_modules",
     "build": "node --max_old_space_size=4096 scripts/build.js",
     "test": "node scripts/test.js",
     "analyze": "source-map-explorer build/static/js/*.js",
